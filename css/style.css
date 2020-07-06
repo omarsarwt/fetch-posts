@@ -1,0 +1,106 @@
+/*Start Global*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+/*End Global*/
+/*Start repos container*/
+.repos-container{
+    width: 800px;
+    margin: 40px auto 0;
+    padding: 20px;
+    overflow: auto;
+    background-color: #f6f6f6;
+}
+.repos-container .input-container{
+    display: block;
+    width: 75%;
+    float: left;
+}
+.repos-container .input-container input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+}
+.repos-container .button-container{
+    width: 20%;
+    float: right;
+    background-color: chocolate;
+    color: #FFF;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+/*End Repos container*/
+/*Start data show*/
+.data-show{
+    width: 800px;
+    margin: 0 auto ;
+    background-color: rgba(128, 128, 128, .3);
+    padding: 20px;
+}
+.data-show > span{
+    background-color: #FFF;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px;
+}
+.data-show .user-container{
+    background-color: #FFF;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.data-show .user-container::after{
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0px;
+    width: 50px;
+    height: 100px;
+    background-color: brown;
+    transform: skewX(45deg);
+    z-index: 1;
+}
+.data-show .user-container::before{
+    content: attr(title);
+    position: absolute;
+    color: #FFF;
+    right: 8px;
+    top: 25px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+.data-show .user-container:not(:last-child){
+    margin-bottom: 10px;
+}
+.data-show .user-container .user-id{
+    width: 150px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid brown;
+    font-weight: 900;
+    font-size: 18px;
+}
+.data-show .user-container .title{
+    text-align: center;
+    font-style: oblique;
+    padding-bottom: 10px;
+}
+.data-show .user-container .post{
+    background-color: #EEE;
+    text-align: center;
+    padding: 5px;
+    line-height: 30px;
+}
+/*End data show*/
